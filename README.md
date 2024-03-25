@@ -5,6 +5,7 @@
 
 ### 快速使用
 
+go
 
 "# alilite_go" 
 
