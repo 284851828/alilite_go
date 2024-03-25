@@ -5,7 +5,12 @@
 
 ### 快速使用
 
-go
+```c
+git clone  https://github.com/284851828/alilite_go.git
+go mod tidy
+go run demo.go
+```
+
 
 "# alilite_go" 
 
