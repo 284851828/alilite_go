@@ -67,6 +67,46 @@ func main() {
 ```
 
 
+### 请求与返回
+
+```c
+curl -X POST \
+     -H "Content-Type: application/json" \
+     -H "X-Gateway-AppId: 999999" \
+     -d '{"timestamp":1711347382,"content":{"extTradeNo":"1711347382","redirectUrl":"https://geekland.cc","company":{"id":"cnogda7i2dkqvf","name":"浙江某科技有限公司"},"customer":{"extId":"user_002","name":"张某","addr":"杭州市西湖区","phone":"13958040000","idCard":"3310021981000000"},"product":{"extId":"product_002","name":"恰恰香瓜子","price":"1.00","Content":"好吃"},"installment":{"limit":1.00,"first":0.01,"num":2,"type":"SDI"}}}' \
+     https://open.xiadandt.com/gate/liteContract/create
+
+
+{
+  "code": 0,
+  "content": {
+    "contractId": "co0hdgni2dkrn7or4m8g",
+    "customer": {
+      "extId": "user_002",
+      "name": "张某",
+      "addr": "杭州市西湖区",
+      "phone": "13958040000",
+      "idCard": "33100219810412251X"
+    },
+    "bill": [
+      {
+        "index": 1,
+        "days": "2024-03-25T08:00:00+08:00",
+        "amount": 0.5
+      },
+      {
+        "index": 2,
+        "days": "2024-04-25T08:00:00+08:00",
+        "amount": 0.5
+      }
+    ],
+    "signUrl": "https://u.alipay.cn/_eLriCTVod5djaQX9hEFxd",
+    "status": 12
+  },
+  "msg": "创建成功"
+}
+
+```
 
 申请 APPID
  
